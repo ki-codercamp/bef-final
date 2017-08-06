@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MVC and MongoDb</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="../public/main.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Backend Foundations</h1>
+        <p>Hands-On: MVC and MongoDb</p>
+      </div>
+    </div>
+
+    <div class="container well">
+      <ul>
+
+          <li>
+            <span>First Name: <%= employees.firstName %></span><br>
+            <span>Last Name: <%= employees.lastName %></span> <br>
+            <span>Title: <%= employees.title %></span> <br>
+            <span>Start Date: <%= employees.startDate %></span> <br>
+            <span>Wage: <%= employees.wage %></span> <br>
+            <span>Birth Date: <%= employees.birthdate %></span> <br>
+
+          </li>
+
+      </ul>
+      
+    </div>
+
+    <div class="container">
+      <form class="form-group" >
+        <span><label for="startDate">Employee ID</label></span>
+        <input class="form-control" type="text" name="_id" value="<%= employees._id %>"><br>
+        <input class="form-control" type="text" name="firstName" value="<%= employees.firstName %>"><br>
+        <input class="form-control" type="text" name="lastName" value="<%= employees.lastName %>"><br>
+        <input class="form-control" type="text" name="title" value="<%= employees.title %>"><br>
+        <span><label for="startDate">Start Date</label></span>
+        <input class="form-control" type="date" name="startDate" value="<%= employees.startDate %>"><br>
+        <input class="form-control" type="number" name="wage" value="<%= employees.wage %>"><br>
+        <span><label for="birthdate">Birth Date</label></span>
+        <input class="form-control" type="date" name="birthdate" value="<%= employees.birthdate %>"><br>
+        <button id="update" class="btn btn-primary" type="submit">Submit</button>
+      </form>
+    </div>
+
+  </body>
+</html>
